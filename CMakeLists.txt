@@ -18,5 +18,8 @@ include_directories( ${Sophus_INCLUDE_DIRS} )
 
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR})
-add_executable( GN GN.cpp )
+add_executable( GN GN.cpp)
 target_link_libraries( GN ${OpenCV_LIBS}  )
+
+add_executable( solvePnP solvePnP.cpp)
+target_link_libraries( solvePnP ${OpenCV_LIBS} ${Sophus_LIBRARIES} )
